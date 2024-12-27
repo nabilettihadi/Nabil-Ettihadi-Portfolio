@@ -11,9 +11,10 @@ export default defineConfig({
         main: './index.html'
       },
       output: {
-        chunkFileNames: 'assets/[name]-[hash].js',
-        entryFileNames: 'assets/[name]-[hash].js',
-        assetFileNames: 'assets/[name]-[hash].[ext]'
+        manualChunks: undefined,
+        assetFileNames: 'assets/[name].[hash].[ext]',
+        chunkFileNames: 'assets/[name].[hash].js',
+        entryFileNames: 'assets/[name].[hash].js'
       }
     },
     sourcemap: true
@@ -21,7 +22,8 @@ export default defineConfig({
   resolve: {
     alias: {
       '@': '/src'
-    }
+    },
+    extensions: ['.js', '.jsx', '.json']
   },
   server: {
     port: 3000,
