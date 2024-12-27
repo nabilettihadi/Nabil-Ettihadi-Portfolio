@@ -3,13 +3,12 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
-  base: './',
+  base: '/Nabil-Ettihadi-Portfolio/',
   build: {
     outDir: 'dist',
-    assetsDir: 'assets',
     rollupOptions: {
-      output: {
-        manualChunks: undefined
+      input: {
+        main: './index.html'
       }
     }
   }
