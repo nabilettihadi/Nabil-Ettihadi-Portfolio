@@ -1,13 +1,13 @@
 {
+  "homepage": "https://nabilettihadi.github.io/Nabil-Ettihadi-Portfolio",
   "name": "nabil-ettihadi-portfolio",
   "private": true,
   "version": "1.0.0",
   "type": "module",
-  "homepage": "https://nabilettihadi.github.io/Nabil-Ettihadi-Portfolio/",
   "scripts": {
     "dev": "vite",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist --remove dist/assets",
+    "deploy": "gh-pages -d dist",
     "build": "vite build",
     "preview": "vite preview"
   },
