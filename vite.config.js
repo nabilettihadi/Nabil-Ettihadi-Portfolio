@@ -5,6 +5,12 @@ export default defineConfig({
   plugins: [react()],
   base: '/Nabil-Ettihadi-Portfolio/',
   build: {
-    outDir: 'dist'
+    outDir: 'dist',
+    assetsDir: 'assets',
+    rollupOptions: {
+      output: {
+        manualChunks: undefined
+      }
+    }
   }
 })
