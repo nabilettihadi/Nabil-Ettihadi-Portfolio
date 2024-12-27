@@ -5,30 +5,6 @@ export default defineConfig({
   plugins: [react()],
   base: '/Nabil-Ettihadi-Portfolio/',
   build: {
-    outDir: 'dist',
-    rollupOptions: {
-      input: {
-        main: './index.html'
-      },
-      output: {
-        manualChunks: undefined,
-        assetFileNames: 'assets/[name].[hash].[ext]',
-        chunkFileNames: 'assets/[name].[hash].js',
-        entryFileNames: 'assets/[name].[hash].js'
-      }
-    }
-  },
-  resolve: {
-    alias: {
-      '@': '/src'
-    },
-    extensions: ['.js', '.jsx', '.json']
-  },
-  server: {
-    port: 3000,
-    open: true,
-    headers: {
-      'Content-Type': 'application/javascript'
-    }
+    outDir: 'dist'
   }
 })
