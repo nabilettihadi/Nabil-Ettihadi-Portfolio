@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Citronix",
+    "imageSrc": "projects/citronix.png",
+    "description": "Application de gestion pour une ferme de citrons, permettant de suivre la production, la récolte, et la vente, avec une gestion optimisée de la productivité des arbres.",
+    "skills": ["Spring Boot", "JUnit", "Mockito", "PostgreSQL", "REST API"],
+    "demo": "https://github.com/nabilettihadi/Citronix",
+    "source": "https://github.com/nabilettihadi/Citronix.git"
+  },
+  {
+    "title": "CCH API",
+    "imageSrc": "projects/cch.png",
+    "description": "API REST pour la gestion des compétitions cyclistes, incluant la gestion des équipes, des coureurs, des courses et des résultats.",
+    "skills": ["Java", "Spring MVC", "Hibernate", "PostgreSQL", "Maven"],
+    "demo": "https://github.com/nabilettihadi/CCH",
+    "source": "https://github.com/nabilettihadi/CCH.git"
+  },
+  {
+    "title": "ITLens",
+    "imageSrc": "projects/itlens.png",
+    "description": "Système de gestion avancée des enquêtes avec création d'enquêtes hiérarchiques et analyse en temps réel.",
+    "skills": ["Java", "Spring Boot", "PostgreSQL", "Maven"],
+    "demo": "https://github.com/nabilettihadi/ITLens",
+    "source": "https://github.com/nabilettihadi/ITLens.git"
+  }
+]
