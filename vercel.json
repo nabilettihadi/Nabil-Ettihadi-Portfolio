@@ -16,7 +16,7 @@
       ]
     },
     {
-      "source": "/src/(.*\\.jsx)",
+      "source": "/(.*).jsx",
       "headers": [
         {
           "key": "Content-Type",
