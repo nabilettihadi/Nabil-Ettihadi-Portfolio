@@ -24,44 +24,15 @@ jobs:
           cache: 'npm'
       
       - name: Install dependencies
-        run: |
-          npm ci
-          npm install -g npm@latest
-      
-      - name: Diagnostic Information
-        run: |
-          echo "Node version: $(node -v)"
-          echo "npm version: $(npm -v)"
-          echo "Current directory contents:"
-          ls -la
-          echo "\nNPM configuration:"
-          npm config list
+        run: npm ci
       
       - name: Build Project
-        run: |
-          npm run build
-          echo "Build completed successfully"
-          echo "Dist directory contents:"
-          ls -la dist
+        run: npm run build
       
-      - name: Verify Build Output
-        run: |
-          if [ ! -d "dist" ]; then
-            echo "Error: dist directory does not exist"
-            exit 1
-          fi
-          if [ "$(ls -A dist)" ]; then
-            echo "Dist directory is not empty"
-          else
-            echo "Error: dist directory is empty"
-            exit 1
-          fi
-      
-      - name: Upload Pages Artifact
+      - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./dist
-          name: github-pages
 
   deploy:
     needs: build
@@ -76,5 +47,3 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2
-        with:
-          artifact_name: github-pages
