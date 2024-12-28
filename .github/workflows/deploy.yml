@@ -2,7 +2,7 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [gh-pages]
+    branches: [main]
   workflow_dispatch:
 
 permissions:
@@ -17,13 +17,19 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          ref: gh-pages
+          fetch-depth: 0
       
       - name: Set up Node
         uses: actions/setup-node@v3
         with:
           node-version: 18
           cache: 'npm'
+      
+      - name: Debug Environment
+        run: |
+          pwd
+          whoami
+          env
       
       - name: Install dependencies
         run: |
@@ -34,28 +40,31 @@ jobs:
         run: |
           npm run build
           echo "Build completed successfully"
+          echo "Dist directory contents:"
+          ls -la dist
       
       - name: Prepare Artifact
         run: |
-          mkdir -p artifact
-          cp -r dist/* artifact/
+          mkdir -p github-pages
+          cp -r dist/* github-pages/
           echo "Artifact contents:"
-          ls -la artifact
+          ls -la github-pages
       
       - name: Upload Pages Artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: artifact
+          path: github-pages
           name: github-pages
       
       - name: Verify Artifact
         run: |
           echo "Checking artifact contents:"
-          find artifact -type f
+          find github-pages -type f
           echo "Artifact size:"
-          du -sh artifact
+          du -sh github-pages
 
   deploy:
+    if: always()
     needs: build
     permissions:
       pages: write
@@ -68,3 +77,12 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2
+        with:
+          artifact_name: github-pages
+        continue-on-error: true
+      
+      - name: Debug Deployment Failure
+        if: failure()
+        run: |
+          echo "Deployment failed. Checking potential issues..."
+          ls -la
