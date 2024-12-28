@@ -10,7 +10,7 @@ export const Navbar = () => {
 
   return (
     <nav className={styles.navbar}>
-      <a className={styles.title} href="/">
+      <a className={styles.title} href="https://nabilettihadi.github.io/Nabil-Ettihadi-Portfolio/">
         Portfolio
       </a>
       <div className={styles.menu}>
