@@ -16,8 +16,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
       
       - name: Set up Node
         uses: actions/setup-node@v3
@@ -25,73 +23,27 @@ jobs:
           node-version: 18
           cache: 'npm'
       
-      - name: Debug Environment
-        run: |
-          pwd
-          whoami
-          env
-      
       - name: Install dependencies
-        run: |
-          npm ci
-          npm cache clean --force
+        run: npm ci
       
-      - name: Build Project
-        run: |
-          npm run build
-          echo "Build completed successfully"
+      - name: Build
+        run: npm run build
       
-      - name: Prepare Artifact
-        run: |
-          mkdir -p artifact
-          cp -r dist/* artifact/
-          echo "Artifact contents:"
-          ls -la artifact
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
       
-      - name: Upload Pages Artifact
+      - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: artifact
-          name: github-pages
-      
-      - name: Verify Artifact
-        run: |
-          echo "Checking artifact contents:"
-          find artifact -type f
-          echo "Artifact size:"
-          du -sh artifact
+          path: ./dist
 
   deploy:
-    if: always()
-    needs: build
-    permissions:
-      pages: write
-      id-token: write
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
+    needs: build
     steps:
-      - name: List Available Artifacts
-        uses: actions/download-artifact@v4
-        with:
-          path: artifacts
-      
-      - name: Debug Artifacts
-        run: |
-          echo "Available artifacts:"
-          ls -la artifacts
-          find artifacts -type f
-      
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2
-        with:
-          artifact_name: github-pages
-        continue-on-error: true
-      
-      - name: Debug Deployment Failure
-        if: failure()
-        run: |
-          echo "Deployment failed. Checking potential issues..."
-          ls -la
