@@ -24,15 +24,48 @@ jobs:
           cache: 'npm'
       
       - name: Install dependencies
-        run: npm ci
+        run: |
+          npm ci
+          npm install -g npm@latest
+      
+      - name: Diagnostic Build Information
+        run: |
+          echo "Node version: $(node -v)"
+          echo "npm version: $(npm -v)"
+          echo "Current directory contents:"
+          ls -la
       
       - name: Build Project
-        run: npm run build
+        run: |
+          npm run build
+          echo "Build completed successfully"
       
-      - name: Upload artifact
+      - name: Verify Build Output
+        run: |
+          echo "Dist directory contents:"
+          ls -la dist
+          echo "Total files in dist:"
+          find dist -type f | wc -l
+      
+      - name: Prepare Artifact
+        run: |
+          mkdir -p github-pages
+          cp -r dist/* github-pages/
+          echo "Prepared artifact contents:"
+          ls -la github-pages
+      
+      - name: Upload Pages Artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./dist
+          path: github-pages
+          name: github-pages
+      
+      - name: Debug Artifact Upload
+        run: |
+          echo "Artifact contents:"
+          find github-pages -type f
+          echo "Artifact size:"
+          du -sh github-pages
 
   deploy:
     needs: build
@@ -44,6 +77,19 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
+      - name: List Available Artifacts
+        uses: actions/download-artifact@v4
+        with:
+          path: artifacts
+      
+      - name: Debug Artifacts
+        run: |
+          echo "Available artifacts:"
+          ls -la artifacts
+          find artifacts -type f
+      
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2
+        with:
+          artifact_name: github-pages
