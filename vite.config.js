@@ -8,6 +8,7 @@ export default defineConfig({
       include: '**/*.{jsx,js}',
     })
   ],
+    base: "/Nabil-Ettihadi-Portfolio",
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
