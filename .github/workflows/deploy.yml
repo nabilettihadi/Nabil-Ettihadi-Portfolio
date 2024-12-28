@@ -39,24 +39,27 @@ jobs:
       - name: Build Project
         run: |
           npm run build
-          echo "Build completed"
+          echo "Build completed successfully"
       
       - name: Prepare Artifact
         run: |
-          mkdir -p github-pages
-          cp -r dist/* github-pages/
-          ls -la github-pages
+          mkdir -p artifact
+          cp -r dist/* artifact/
+          echo "Artifact contents:"
+          ls -la artifact
       
       - name: Upload Pages Artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: github-pages
+          path: artifact
           name: github-pages
       
-      - name: Debug Artifact
+      - name: Verify Artifact
         run: |
-          echo "Artifact contents:"
-          find github-pages -type f
+          echo "Checking artifact contents:"
+          find artifact -type f
+          echo "Artifact size:"
+          du -sh artifact
 
   deploy:
     if: always()
@@ -69,6 +72,17 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
+      - name: List Available Artifacts
+        uses: actions/download-artifact@v4
+        with:
+          path: artifacts
+      
+      - name: Debug Artifacts
+        run: |
+          echo "Available artifacts:"
+          ls -la artifacts
+          find artifacts -type f
+      
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2
