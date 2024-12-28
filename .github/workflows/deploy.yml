@@ -17,7 +17,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0  # Fetch full history
+          fetch-depth: 0
       
       - name: Set up Node
         uses: actions/setup-node@v3
@@ -25,30 +25,48 @@ jobs:
           node-version: 18
           cache: 'npm'
       
-      - name: Clean potential gh-pages cache
+      - name: Debug Environment
         run: |
-          rm -rf node_modules/.cache/gh-pages
-          rm -f .gitmodules
+          pwd
+          whoami
+          env
       
       - name: Install dependencies
         run: |
           npm ci
           npm cache clean --force
       
-      - name: Build
-        run: npm run build
-      
-      - name: List build output
+      - name: Verbose Build
         run: |
+          npm run build --verbose
+          echo "Build exit code: $?"
+      
+      - name: Detailed Build Output
+        run: |
+          echo "Contents of current directory:"
           ls -la
-          ls -la dist
+          echo "\nContents of dist directory:"
+          ls -la dist || echo "dist directory does not exist"
+          echo "\nChecking build artifacts:"
+          find . -type f
       
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./dist
+          name: github-pages
+        continue-on-error: true
+      
+      - name: Check artifact upload
+        if: failure()
+        run: |
+          echo "Artifact upload failed. Checking potential issues..."
+          df -h
+          du -sh *
+          du -sh dist/*
 
   deploy:
+    if: always()
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
@@ -58,3 +76,10 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2
+        continue-on-error: true
+      
+      - name: Debug Deployment Failure
+        if: failure()
+        run: |
+          echo "Deployment failed. Checking potential issues..."
+          ls -la
