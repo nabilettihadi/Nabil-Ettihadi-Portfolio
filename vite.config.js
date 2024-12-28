@@ -3,12 +3,11 @@ import react from '@vitejs/plugin-react'
 import path from 'path'
 
 export default defineConfig({
-  plugins: [
-    react({
-      include: '**/*.{jsx,js}',
-    })
-  ],
-    base: "/Nabil-Ettihadi-Portfolio",
+  plugins: [react()],
+  base: '/Nabil-Ettihadi-Portfolio/',
+  build: {
+    outDir: 'dist'
+  },
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
@@ -16,6 +15,5 @@ export default defineConfig({
       '@assets': path.resolve(__dirname, './src/assets')
     },
     extensions: ['.js', '.jsx', '.json']
-  },
-  base: '/'
+  }
 })
