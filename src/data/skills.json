@@ -66,5 +66,9 @@
   {
     "title": "i18n",
     "imageSrc": "skills/i18n.png"
+  },
+  {
+    "title": "Docker",
+    "imageSrc": "skills/docker.png"
   }
 ]
