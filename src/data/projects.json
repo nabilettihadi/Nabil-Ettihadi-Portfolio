@@ -22,5 +22,21 @@
     "skills": ["Java", "Spring Boot", "PostgreSQL", "Maven"],
     "demo": "https://github.com/nabilettihadi/ITLens",
     "source": "https://github.com/nabilettihadi/ITLens.git"
+  },
+  {
+    "title": "WRM - Waiting Room Management",
+    "imageSrc": "projects/wrm.png",
+    "description": "API REST moderne pour la gestion intelligente des salles d'attente. Implémente plusieurs algorithmes de planification (FIFO, Priority, SJF), avec suivi en temps réel des visiteurs et génération de statistiques détaillées.",
+    "skills": ["Spring Boot", "PostgreSQL", "Docker", "JUnit", "OpenAPI", "REST API"],
+    "demo": "https://github.com/nabilettihadi/WaitingRoom",
+    "source": "https://github.com/nabilettihadi/WaitingRoom.git"
+  },
+  {
+    "title": "EcoMove",
+    "imageSrc": "projects/ecomove.png",
+    "description": "Plateforme de gestion de billets de transport permettant aux clients de rechercher et réserver des billets pour différents moyens de transport. Gestion complète des clients, des réservations et des trajets.",
+    "skills": ["Java", "PostgreSQL", "JDBC", "Stream API", "Collection API", "POO"],
+    "demo": "https://github.com/nabilettihadi/EcoMove",
+    "source": "https://github.com/nabilettihadi/EcoMove.git"
   }
 ]

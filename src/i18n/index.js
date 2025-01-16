@@ -71,6 +71,14 @@ const resources = {
         title: "Projets",
         viewDemo: "Démo",
         viewCode: "Code",
+        wrm: {
+          title: "WRM - Gestion des Salles d'Attente",
+          description: "API REST moderne pour la gestion intelligente des salles d'attente. Implémente plusieurs algorithmes de planification (FIFO, Priority, SJF), avec suivi en temps réel des visiteurs et génération de statistiques détaillées."
+        },
+        ecomove: {
+          title: "EcoMove",
+          description: "Plateforme de gestion de billets de transport permettant aux clients de rechercher et réserver des billets pour différents moyens de transport. Gestion complète des clients, des réservations et des trajets."
+        },
         citronix: {
           title: "Citronix",
           description: "Application de gestion pour une ferme de citrons, permettant de suivre la production, la récolte, et la vente, avec une gestion optimisée de la productivité des arbres."
@@ -172,6 +180,14 @@ const resources = {
         title: "Projects",
         viewDemo: "Demo",
         viewCode: "Code",
+        wrm: {
+          title: "WRM - Waiting Room Management",
+          description: "Modern REST API for intelligent waiting room management. Implements multiple scheduling algorithms (FIFO, Priority, SJF), with real-time visitor tracking and detailed statistics generation."
+        },
+        ecomove: {
+          title: "EcoMove",
+          description: "Transport ticket management platform allowing customers to search and book tickets for different modes of transport. Complete management of customers, reservations, and journeys."
+        },
         citronix: {
           title: "Citronix",
           description: "Management application for a lemon farm, allowing to track production, harvest, and sales, with optimized tree productivity management."
@@ -273,6 +289,14 @@ const resources = {
         title: "Projekte",
         viewDemo: "Demo",
         viewCode: "Code",
+        wrm: {
+          title: "WRM - Wartezimmerverwaltung",
+          description: "Moderne REST-API für intelligente Wartezimmerverwaltung. Implementiert mehrere Planungsalgorithmen (FIFO, Priorität, SJF), mit Echtzeit-Besucherverfolgung und detaillierter Statistikgenerierung."
+        },
+        ecomove: {
+          title: "EcoMove",
+          description: "Transportticket-Verwaltungsplattform, die es Kunden ermöglicht, Tickets für verschiedene Verkehrsmittel zu suchen und zu buchen. Vollständige Verwaltung von Kunden, Reservierungen und Reisen."
+        },
         citronix: {
           title: "Citronix",
           description: "Verwaltungsanwendung für eine Zitronenfarm zur Verfolgung von Produktion, Ernte und Verkauf mit optimierter Baumproduktivitätsverwaltung."
@@ -283,7 +307,7 @@ const resources = {
         },
         itlens: {
           title: "ITLens",
-          description: "Fortgeschrittenes Umfrageverwaltungssystem mit hierarchischer Umfrageerstellung und Echtzeit-Analyse."
+          description: "Fortgeschrittenes Umfrageverwaltungssystem mit hierarchischer Umfrageerstellung und Echtzeitanalyse."
         }
       },
       contact: {
@@ -317,4 +341,4 @@ i18n
     }
   });
 
-export default i18n; 
+export default i18n;
