@@ -6,7 +6,7 @@ const resources = {
     translation: {
       hero: {
         title: "Bonjour, je suis Nabil Ettihadi",
-        description: "Développeur Java passionné par le développement web et les nouvelles technologies. Spécialisé en Spring Boot, Laravel et Vue.js.",
+        description: "Développeur Full Stack passionné, avec une solide expérience en Java/Spring Boot et Angular. Je développe des applications web modernes en mettant l'accent sur la qualité et les bonnes pratiques de développement.",
         contactBtn: "Me contacter",
         downloadCV: "Télécharger CV"
       },
@@ -71,6 +71,10 @@ const resources = {
         title: "Projets",
         viewDemo: "Démo",
         viewCode: "Code",
+        baticuisine: {
+          title: "Bati-Cuisine",
+          description: "Application Java pour l'estimation des coûts de construction et rénovation de cuisines. Gestion complète des projets avec calcul des coûts des matériaux, main-d'œuvre, et génération de devis personnalisés."
+        },
         wrm: {
           title: "WRM - Gestion des Salles d'Attente",
           description: "API REST moderne pour la gestion intelligente des salles d'attente. Implémente plusieurs algorithmes de planification (FIFO, Priority, SJF), avec suivi en temps réel des visiteurs et génération de statistiques détaillées."
@@ -115,7 +119,7 @@ const resources = {
     translation: {
       hero: {
         title: "Hi, I'm Nabil Ettihadi",
-        description: "Java developer passionate about web development and new technologies. Specialized in Spring Boot, Laravel and Vue.js.",
+        description: "Passionate Full Stack Developer with strong experience in Java/Spring Boot and Angular. I develop modern web applications with a focus on quality and development best practices.",
         contactBtn: "Contact Me",
         downloadCV: "Download Resume"
       },
@@ -180,6 +184,10 @@ const resources = {
         title: "Projects",
         viewDemo: "Demo",
         viewCode: "Code",
+        baticuisine: {
+          title: "Bati-Cuisine",
+          description: "Java application for estimating kitchen construction and renovation costs. Complete project management with calculation of material costs, labor, and generation of customized quotes."
+        },
         wrm: {
           title: "WRM - Waiting Room Management",
           description: "Modern REST API for intelligent waiting room management. Implements multiple scheduling algorithms (FIFO, Priority, SJF), with real-time visitor tracking and detailed statistics generation."
@@ -190,7 +198,7 @@ const resources = {
         },
         citronix: {
           title: "Citronix",
-          description: "Management application for a lemon farm, allowing to track production, harvest, and sales, with optimized tree productivity management."
+          description: "Management application for a lemon farm, enabling tracking of production, harvesting, and sales, with optimized tree productivity management."
         },
         cch: {
           title: "CCH API",
@@ -224,7 +232,7 @@ const resources = {
     translation: {
       hero: {
         title: "Hallo, ich bin Nabil Ettihadi",
-        description: "Java-Entwickler mit Leidenschaft für Webentwicklung und neue Technologien. Spezialisiert auf Spring Boot, Laravel und Vue.js.",
+        description: "Leidenschaftlicher Full-Stack-Entwickler mit fundierter Erfahrung in Java/Spring Boot und Angular. Ich entwickle moderne Webanwendungen mit Fokus auf Qualität und Best Practices.",
         contactBtn: "Kontaktieren Sie mich",
         downloadCV: "Lebenslauf herunterladen"
       },
@@ -289,6 +297,10 @@ const resources = {
         title: "Projekte",
         viewDemo: "Demo",
         viewCode: "Code",
+        baticuisine: {
+          title: "Bati-Cuisine",
+          description: "Java-Anwendung zur Kostenkalkulation für Küchenbau und -renovierung. Komplette Projektverwaltung mit Berechnung von Materialkosten, Arbeitskosten und Erstellung individueller Angebote."
+        },
         wrm: {
           title: "WRM - Wartezimmerverwaltung",
           description: "Moderne REST-API für intelligente Wartezimmerverwaltung. Implementiert mehrere Planungsalgorithmen (FIFO, Priorität, SJF), mit Echtzeit-Besucherverfolgung und detaillierter Statistikgenerierung."

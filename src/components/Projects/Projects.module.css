@@ -24,9 +24,33 @@
   justify-items: center;
 }
 
+@media screen and (max-width: 1200px) {
+  .container {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+}
+
 @media screen and (max-width: 830px) {
   .projects {
     grid-template-columns: 1fr;
     gap: 24px;
+  }
+  
+  .title {
+    font-size: 28px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .container {
+    margin-top: 40px;
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+  
+  .title {
+    font-size: 24px;
+    margin-bottom: 24px;
   }
 }

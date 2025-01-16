@@ -38,5 +38,12 @@
     "skills": ["Java", "PostgreSQL", "JDBC", "Stream API", "Collection API", "POO"],
     "demo": "https://github.com/nabilettihadi/EcoMove",
     "source": "https://github.com/nabilettihadi/EcoMove.git"
+  },{
+    "title": "Bati-Cuisine",
+    "imageSrc": "projects/baticuisine.png",
+    "description": "Application Java pour l'estimation des coûts de construction et rénovation de cuisines. Gestion complète des projets avec calcul des coûts des matériaux, main-d'œuvre, et génération de devis personnalisés.",
+    "skills": ["Java", "PostgreSQL", "JDBC", "Stream API", "Design Patterns", "Git"],
+    "demo": "https://github.com/nabilettihadi/BatiCuisine",
+    "source": "https://github.com/nabilettihadi/BatiCuisine.git"
   }
 ]
