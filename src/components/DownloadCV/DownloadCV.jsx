@@ -2,26 +2,24 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 import styles from "./DownloadCV.module.css";
 import { getImageUrl } from "../../utils";
+import cvFR from "../../assets/cv/CV_Nabil_Ettihadi_FR.pdf";
+import cvEN from "../../assets/cv/CV_Nabil_Ettihadi_EN.pdf";
+import cvDE from "../../assets/cv/Lebenslauf_Nabil_Ettihadi.pdf";
 
 export const DownloadCV = () => {
   const { t, i18n } = useTranslation();
 
   const handleDownload = () => {
     const cvFiles = {
-      fr: "CV_Nabil_Ettihadi_FR.pdf",
-      en: "CV_Nabil_Ettihadi_EN.pdf",
-      de: "Lebenslauf_Nabil_Ettihadi.pdf"
+      fr: cvFR,
+      en: cvEN,
+      de: cvDE
     };
 
     const currentLang = i18n.language;
     const cvFile = cvFiles[currentLang] || cvFiles.fr;
     
-    const link = document.createElement('a');
-    link.href = `/assets/cv/${cvFile}`;
-    link.download = `CV_Nabil_Ettihadi_${currentLang.toUpperCase()}.pdf`;
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+    window.open(cvFile, '_blank');
   };
 
   return (
