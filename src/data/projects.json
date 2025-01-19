@@ -1,7 +1,7 @@
 [
   {
     "title": "Citronix",
-    "imageSrc": "projects/citronix.png",
+    "imageSrc": "projects/Citronix.png",
     "description": "Application de gestion pour une ferme de citrons, permettant de suivre la production, la récolte, et la vente, avec une gestion optimisée de la productivité des arbres.",
     "skills": ["Spring Boot", "JUnit", "Mockito", "PostgreSQL", "REST API"],
     "demo": "https://github.com/nabilettihadi/Citronix",
