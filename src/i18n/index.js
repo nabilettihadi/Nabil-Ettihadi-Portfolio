@@ -94,6 +94,10 @@ const resources = {
         itlens: {
           title: "ITLens",
           description: "Système de gestion avancée des enquêtes avec création d'enquêtes hiérarchiques et analyse en temps réel."
+        },
+        recyclehub: {
+          title: "RecycleHub",
+          description: "Une application de gestion de recyclage innovante qui connecte les particuliers aux collecteurs agréés. Système complet avec gestion des demandes, suivi en temps réel et programme de récompenses par points."
         }
       },
       contact: {
@@ -207,6 +211,10 @@ const resources = {
         itlens: {
           title: "ITLens",
           description: "Advanced survey management system with hierarchical survey creation and real-time analysis."
+        },
+        recyclehub: {
+          title: "RecycleHub",
+          description: "An innovative recycling management application that connects individuals with certified collectors. Complete system with request management, real-time tracking, and points-based rewards program."
         }
       },
       contact: {
@@ -320,6 +328,10 @@ const resources = {
         itlens: {
           title: "ITLens",
           description: "Fortgeschrittenes Umfrageverwaltungssystem mit hierarchischer Umfrageerstellung und Echtzeitanalyse."
+        },
+        recyclehub: {
+          title: "RecycleHub",
+          description: "Eine innovative Recycling-Verwaltungsanwendung, die Einzelpersonen mit zertifizierten Sammlern verbindet. Komplettes System mit Anfrageverwaltung, Echtzeit-Verfolgung und Punkte-basiertem Belohnungsprogramm."
         }
       },
       contact: {

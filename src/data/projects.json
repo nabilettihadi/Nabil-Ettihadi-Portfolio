@@ -1,5 +1,13 @@
 [
   {
+    "title": "RecycleHub",
+    "imageSrc": "projects/recyclehub.png",
+    "description": "Une application de gestion de recyclage innovante qui connecte les particuliers aux collecteurs agréés. Système complet avec gestion des demandes, suivi en temps réel et programme de récompenses par points.",
+    "skills": ["Angular 17", "NgRx", "RxJS", "TypeScript", "JSON Server", "Tailwind", "Reactive Forms"],
+    "demo": "https://github.com/nabilettihadi/RecycleHub",
+    "source": "https://github.com/nabilettihadi/RecycleHub.git"
+  },
+  {
     "title": "Citronix",
     "imageSrc": "projects/Citronix.png",
     "description": "Application de gestion pour une ferme de citrons, permettant de suivre la production, la récolte, et la vente, avec une gestion optimisée de la productivité des arbres.",

@@ -11,8 +11,8 @@ export const ProjectCard = ({
   
   // Fonction pour obtenir la clé de traduction à partir du titre
   const getTranslationKey = (projectTitle) => {
-    // Mapper les titres aux clés de traduction
     const titleToKey = {
+      "RecycleHub": "recyclehub",
       "WRM - Waiting Room Management": "wrm",
       "CCH API": "cch",
       "Bati-Cuisine": "baticuisine",
