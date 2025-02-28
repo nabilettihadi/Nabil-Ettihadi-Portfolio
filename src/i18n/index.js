@@ -25,7 +25,7 @@ const resources = {
         },
         backend: {
           title: "Développeur Backend",
-          description: "PHP, Laravel, Java, Spring Boot, RESTful APIs"
+          description: "Java (Spring Boot, Spring Security, Spring MVC, Spring Data, JEE, Hibernate JPA), PHP (Laravel), RESTful APIs"
         },
         ui: {
           title: "Conception",
@@ -142,7 +142,7 @@ const resources = {
         },
         backend: {
           title: "Backend Developer",
-          description: "PHP, Laravel, Java, Spring Boot, RESTful APIs"
+          description: "Java (Spring Boot, Spring Security, Spring MVC, Spring Data, JEE, Hibernate JPA), PHP (Laravel), RESTful APIs"
         },
         ui: {
           title: "Design",
@@ -259,7 +259,7 @@ const resources = {
         },
         backend: {
           title: "Backend-Entwickler",
-          description: "PHP, Laravel, Java, Spring Boot, RESTful APIs"
+          description: "Java (Spring Boot, Spring Security, Spring MVC, Spring Data, JEE, Hibernate JPA), PHP (Laravel), RESTful APIs"
         },
         ui: {
           title: "Design",
