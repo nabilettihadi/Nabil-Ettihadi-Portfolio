@@ -27,6 +27,16 @@ export const Experience = () => {
 
         {/* Section de l'historique */}
         <div className={styles.history}>
+          {/* Consultant Technico-Fonctionnel */}
+          <div className={styles.historyItem}>
+            <img src={getImageUrl("history/geerd.png")} alt="CEGEDIM logo" />
+            <div className={styles.historyItemDetails}>
+              <h3>{t('experience.positions.consultant.title')}</h3>
+              <p>{t('experience.positions.consultant.company')}</p>
+              <p>{t('experience.positions.consultant.period')}</p>
+            </div>
+          </div>
+
           {/* Expérience professionnelle */}
           <div className={styles.historyItem}>
             <img src={getImageUrl("history/geerd.png")} alt="GEERD logo" />

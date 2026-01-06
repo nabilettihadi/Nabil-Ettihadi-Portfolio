@@ -36,6 +36,11 @@ const resources = {
         title: "Expérience",
         education: "Formation",
         positions: {
+          consultant: {
+            title: "Consultant Technico-Fonctionnel",
+            company: "CEGEDIM",
+            period: "04/2025 - en cours"
+          },
           geerd: {
             title: "Développeur Web Full Stack - Stage",
             company: "GEERD",
@@ -44,7 +49,7 @@ const resources = {
           youcode: {
             title: "Développement Web Full Stack",
             company: "Youcode Safi - UM6P",
-            period: "2023 - en cours"
+            period: "2023 - 2025"
           }
         },
         education: {
@@ -153,6 +158,11 @@ const resources = {
         title: "Experience",
         education: "Education",
         positions: {
+          consultant: {
+            title: "Technical-Functional Consultant",
+            company: "CEGEDIM",
+            period: "04/2025 - ongoing"
+          },
           geerd: {
             title: "Full Stack Web Developer - Internship",
             company: "GEERD",
@@ -161,7 +171,7 @@ const resources = {
           youcode: {
             title: "Full Stack Web Development",
             company: "Youcode Safi - UM6P",
-            period: "2023 - ongoing"
+            period: "2023 - 2025"
           }
         },
         education: {
@@ -270,6 +280,11 @@ const resources = {
         title: "Erfahrung",
         education: "Ausbildung",
         positions: {
+          consultant: {
+            title: "Technisch-Funktionaler Berater",
+            company: "CEGEDIM",
+            period: "04/2025 - laufend"
+          },
           geerd: {
             title: "Full-Stack Webentwickler - Praktikum",
             company: "GEERD",
@@ -278,7 +293,7 @@ const resources = {
           youcode: {
             title: "Full-Stack Webentwicklung",
             company: "Youcode Safi - UM6P",
-            period: "2023 - laufend"
+            period: "2023 - 2025"
           }
         },
         education: {
