@@ -29,7 +29,7 @@ export const Experience = () => {
         <div className={styles.history}>
           {/* Consultant Technico-Fonctionnel */}
           <div className={styles.historyItem}>
-            <img src={getImageUrl("history/geerd.png")} alt="CEGEDIM logo" />
+            <img src={getImageUrl("history/cegedim.jpg")} alt="CEGEDIM logo" />
             <div className={styles.historyItemDetails}>
               <h3>{t('experience.positions.consultant.title')}</h3>
               <p>{t('experience.positions.consultant.company')}</p>
