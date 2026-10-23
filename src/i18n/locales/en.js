@@ -72,7 +72,6 @@ export default {
     copied: "Address copied!",
     call: "Call",
     cv: "CV",
-    cvLangs: { fr: "Français", en: "English", de: "Deutsch" }
   },
   palette: { hint: "Ctrl K", placeholder: "Jump to a section, change language…", empty: "No results", goto: "Go to", lang: "Language:" },
   footer: { built: "Designed and built by Nabil Ettihadi with React and Vite.", top: "Back to top" }

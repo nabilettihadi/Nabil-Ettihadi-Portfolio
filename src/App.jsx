@@ -390,8 +390,8 @@ function Contact() {
         </div>
         <div className="contact__cv">
           <span>{t("contact.cv")}</span>
-          {Object.keys(CVS).map((code) => (
-            <a key={code} href={CVS[code]} target="_blank" rel="noopener" onClick={() => logEvent("CV", code)}><Icon name="download" />{t(`contact.cvLangs.${code}`)}</a>
+          {LANGUAGES.filter((l) => CVS[l.code]).map((l) => (
+            <a key={l.code} href={CVS[l.code]} target="_blank" rel="noopener" lang={l.code} onClick={() => logEvent("CV", l.code)}><Icon name="download" />{l.name}</a>
           ))}
         </div>
       </div>

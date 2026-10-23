@@ -8,9 +8,6 @@ import itlens from "./assets/img/itlens.webp";
 import wrm from "./assets/img/wrm.webp";
 import ecomove from "./assets/img/ecomove.webp";
 import baticuisine from "./assets/img/baticuisine.webp";
-import cvFr from "./assets/cv/CV_Nabil_Ettihadi_FR.pdf";
-import cvEn from "./assets/cv/CV_Nabil_Ettihadi_EN.pdf";
-import cvDe from "./assets/cv/Lebenslauf_Nabil_Ettihadi.pdf";
 
 const gh = (repo) => `https://github.com/nabilettihadi/${repo}`;
 
@@ -22,7 +19,11 @@ export const CONTACT = {
   github: "https://github.com/nabilettihadi",
 };
 
-export const CVS = { fr: cvFr, en: cvEn, de: cvDe };
+// Un CV par langue du site : CV_Nabil_Ettihadi_XX.pdf (Lebenslauf_Nabil_Ettihadi.pdf en allemand).
+const cvFiles = import.meta.glob("./assets/cv/*.pdf", { eager: true, import: "default" });
+export const CVS = Object.fromEntries(Object.entries(cvFiles).map(([path, url]) => [
+  path.includes("Lebenslauf") ? "de" : path.match(/_([A-Z]{2})\.pdf$/)[1].toLowerCase(), url,
+]));
 
 export const PROJECTS = [
   { id: "hireme", title: "HireMe", image: hireme, featured: true, tags: ["web"], stack: ["Laravel 10", "PHP 8.3", "React", "Tailwind CSS 4", "MySQL", "Docker", "PHPUnit"], code: gh("HireMe") },

@@ -72,7 +72,6 @@ export default {
     copied: "تم نسخ العنوان!",
     call: "اتصال",
     cv: "السيرة الذاتية",
-    cvLangs: { fr: "Français", en: "English", de: "Deutsch" }
   },
   palette: { hint: "Ctrl K", placeholder: "انتقل إلى قسم، غيّر اللغة…", empty: "لا توجد نتائج", goto: "انتقل إلى", lang: "اللغة:" },
   footer: { built: "تصميم وتطوير نبيل اتحادي باستخدام React وVite.", top: "إلى الأعلى" }

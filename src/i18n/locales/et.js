@@ -72,7 +72,6 @@ export default {
     copied: "Aadress kopeeritud!",
     call: "Helista",
     cv: "CV",
-    cvLangs: { fr: "Français", en: "English", de: "Deutsch" }
   },
   palette: { hint: "Ctrl K", placeholder: "Mine jaotisesse, vaheta keelt…", empty: "Tulemusi pole", goto: "Mine:", lang: "Keel:" },
   footer: { built: "Kujundanud ja arendanud Nabil Ettihadi Reacti ja Vite’iga.", top: "Üles" }

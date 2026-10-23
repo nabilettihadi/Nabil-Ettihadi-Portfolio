@@ -72,7 +72,6 @@ export default {
     copied: "Adresa zkopírována!",
     call: "Zavolat",
     cv: "Životopis",
-    cvLangs: { fr: "Français", en: "English", de: "Deutsch" }
   },
   palette: { hint: "Ctrl K", placeholder: "Přejít na sekci, změnit jazyk…", empty: "Žádné výsledky", goto: "Přejít na", lang: "Jazyk:" },
   footer: { built: "Navrhl a vytvořil Nabil Ettihadi v Reactu a Vite.", top: "Nahoru" }

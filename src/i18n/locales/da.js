@@ -72,7 +72,6 @@ export default {
     copied: "Adressen er kopieret!",
     call: "Ring",
     cv: "CV",
-    cvLangs: { fr: "Français", en: "English", de: "Deutsch" }
   },
   palette: { hint: "Ctrl K", placeholder: "Gå til en sektion, skift sprog…", empty: "Ingen resultater", goto: "Gå til", lang: "Sprog:" },
   footer: { built: "Designet og udviklet af Nabil Ettihadi med React og Vite.", top: "Til toppen" }

@@ -72,7 +72,6 @@ export default {
     copied: "Adres gekopieerd!",
     call: "Bellen",
     cv: "Cv",
-    cvLangs: { fr: "Français", en: "English", de: "Deutsch" }
   },
   palette: { hint: "Ctrl K", placeholder: "Ga naar een sectie, wijzig de taal…", empty: "Geen resultaten", goto: "Ga naar", lang: "Taal:" },
   footer: { built: "Ontworpen en gebouwd door Nabil Ettihadi met React en Vite.", top: "Naar boven" }

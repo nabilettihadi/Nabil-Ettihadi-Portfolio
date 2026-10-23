@@ -72,7 +72,6 @@ export default {
     copied: "Адрес скопирован!",
     call: "Позвонить",
     cv: "Резюме",
-    cvLangs: { fr: "Français", en: "English", de: "Deutsch" }
   },
   palette: { hint: "Ctrl K", placeholder: "Перейти к разделу, сменить язык…", empty: "Ничего не найдено", goto: "Перейти:", lang: "Язык:" },
   footer: { built: "Дизайн и разработка — Набиль Эттихади, React и Vite.", top: "Наверх" }

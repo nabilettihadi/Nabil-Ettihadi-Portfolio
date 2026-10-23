@@ -72,7 +72,6 @@ export default {
     copied: "Адресу скопійовано!",
     call: "Зателефонувати",
     cv: "Резюме",
-    cvLangs: { fr: "Français", en: "English", de: "Deutsch" }
   },
   palette: { hint: "Ctrl K", placeholder: "Перейти до розділу, змінити мову…", empty: "Нічого не знайдено", goto: "Перейти:", lang: "Мова:" },
   footer: { built: "Дизайн і розробка — Набіль Еттіхаді, React і Vite.", top: "Угору" }

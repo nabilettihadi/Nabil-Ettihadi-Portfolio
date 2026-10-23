@@ -72,7 +72,6 @@ export default {
     copied: "Η διεύθυνση αντιγράφηκε!",
     call: "Κλήση",
     cv: "Βιογραφικό",
-    cvLangs: { fr: "Français", en: "English", de: "Deutsch" }
   },
   palette: { hint: "Ctrl K", placeholder: "Μετάβαση σε ενότητα, αλλαγή γλώσσας…", empty: "Κανένα αποτέλεσμα", goto: "Μετάβαση:", lang: "Γλώσσα:" },
   footer: { built: "Σχεδιασμός και ανάπτυξη: Nabil Ettihadi, με React και Vite.", top: "Επιστροφή επάνω" }

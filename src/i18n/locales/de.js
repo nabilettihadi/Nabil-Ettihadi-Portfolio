@@ -72,7 +72,6 @@ export default {
     copied: "Adresse kopiert!",
     call: "Anrufen",
     cv: "Lebenslauf",
-    cvLangs: { fr: "Français", en: "English", de: "Deutsch" }
   },
   palette: { hint: "Strg K", placeholder: "Zu einem Abschnitt springen, Sprache wechseln…", empty: "Keine Ergebnisse", goto: "Gehe zu", lang: "Sprache:" },
   footer: { built: "Gestaltet und entwickelt von Nabil Ettihadi mit React und Vite.", top: "Nach oben" }
