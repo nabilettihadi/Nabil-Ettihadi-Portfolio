@@ -1,18 +1,18 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import App from "./App.jsx";
-import "./index.css";
+import "@fontsource-variable/manrope";
+import "@fontsource-variable/jetbrains-mono";
+import "@fontsource/noto-kufi-arabic/400.css";
+import "@fontsource/noto-kufi-arabic/700.css";
 import "./i18n";
-import { initGA, logPageView } from './utils/analytics';
-
-import "@fontsource/outfit";
-import "@fontsource/roboto";
+import "./styles.css";
+import App from "./App.jsx";
+import { initGA } from "./analytics";
 
 initGA();
-logPageView();
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <App />
   </React.StrictMode>,
-)
+);
